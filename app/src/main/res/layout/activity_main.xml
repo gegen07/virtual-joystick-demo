@@ -7,48 +7,16 @@
     tools:context="io.github.controlwear.joystickdemo.MainActivity"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textView_angle_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0°"/>
-
-
-    <TextView
-        android:id="@+id/textView_strength_left"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_angle_left"
-        android:text="0%"/>
-
-
     <io.github.controlwear.virtual.joystick.android.JoystickView
         xmlns:custom="http://schemas.android.com/apk/res-auto"
         android:id="@+id/joystickView_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_margin="32dp"
-        android:background="@drawable/joystick_background"
-        custom:JV_buttonImage="@drawable/pink_ball"
-        custom:JV_fixedCenter="true"/>
-
-
-    <TextView
-        android:id="@+id/textView_angle_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="0°"/>
-
-
-    <TextView
-        android:id="@+id/textView_strength_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView_angle_right"
-        android:text="0%"/>
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="64dp"
+        custom:JV_backgroundColor="#430FCC"
+        custom:JV_buttonImage="@drawable/green_ball" />
 
 
     <io.github.controlwear.virtual.joystick.android.JoystickView
@@ -59,9 +27,41 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="64dp"
-        custom:JV_borderWidth="8dp"
-        custom:JV_backgroundColor="#009688"
-        custom:JV_borderColor="#00796B"
-        custom:JV_buttonColor="#FF6E40"/>
+        custom:JV_backgroundColor="#430FCC"
+        custom:JV_buttonImage="@drawable/green_ball"/>
+
+
+    <Switch
+        android:id="@+id/simpleSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:colorControlActivated="#ff932c"
+        android:text="Udp"
+        android:trackTint="@color/switch_color" />
+
+    <EditText
+        android:id="@+id/IpAddress"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:drawableLeft="@drawable/ic_network_wifi"
+        android:hint="@string/ip"
+        android:inputType="text"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="#999999"
+        android:textSize="14dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnAddTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/IpAddress"
+        android:layout_alignBottom="@+id/IpAddress"
+        android:layout_toEndOf="@+id/IpAddress"
+        android:text="@string/btn_AddTitle" />
 
 </RelativeLayout>
