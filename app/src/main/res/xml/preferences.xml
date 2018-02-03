@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_menu_item">
+
+    <EditTextPreference
+        android:defaultValue="@string/default_value_Port"
+        android:key="@string/port_preference_key"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Port" />
+
+    <EditTextPreference
+        android:defaultValue="@string/default_value_IP"
+        android:key="@string/ip_preference_key"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="IP" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/switch_send_key"
+        android:title="Send Message" />
+
+
+</PreferenceScreen>

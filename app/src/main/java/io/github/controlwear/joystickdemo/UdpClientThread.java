@@ -15,7 +15,7 @@ public class UdpClientThread {
 
     UdpClientThread(){}
 
-    public static void sendMessage(final String message, final String ipAddress) {
+    public static void sendMessage(final String message, final String ipAddress, final int port) {
 
         Thread thread = new Thread(new Runnable() {
 
@@ -30,7 +30,7 @@ public class UdpClientThread {
                     // IP Address below is the IP address of that Device where server socket is opened.
                     InetAddress serverAddr = InetAddress.getByName(ipAddress);
                     DatagramPacket dp;
-                    dp = new DatagramPacket(message.getBytes(), message.length(), serverAddr, 4445);
+                    dp = new DatagramPacket(message.getBytes(), message.length(), serverAddr, port);
                     ds.send(dp);
 
                 } catch (IOException e) {
